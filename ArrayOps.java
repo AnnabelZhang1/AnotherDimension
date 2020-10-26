@@ -2,12 +2,12 @@ import java.util.*;
 
 public class ArrayOps{
 
+// PART 4
   public static int sum(int[] arr)
     {
       int sum = 0;
       for (int i = 0; i < arr.length; i++)
         sum += arr[i];
-      System.out.println(sum);
       return sum;
     }
 
@@ -18,7 +18,6 @@ public class ArrayOps{
         {
           max = Math.max(arr[i], max);
         }
-      System.out.println(max);
       return max;
     }
 
@@ -34,7 +33,6 @@ public class ArrayOps{
             }
           arraysum[i] = indivsum;
         }
-      System.out.println(Arrays.toString(arraysum));
       return arraysum;
     }
 
@@ -50,7 +48,6 @@ public class ArrayOps{
             }
           maxeach[i] = max;
         }
-      System.out.println(Arrays.toString(maxeach));
       return maxeach;
     }
 
@@ -64,8 +61,30 @@ public class ArrayOps{
               indivsum += arr[i][j];
             }
         }
-      System.out.println(indivsum);
       return indivsum;
     }
 
+// PART 5
+  public static int[] sumCols(int[][] matrix)
+    {
+
+    }
+/*
+  public static boolean isRowMagic(int[][] matrix)
+    {
+
+    }
+
+  public static boolea isColMagic(int[][] matrix)
+    {
+
+    }
+
+  public static boolean isLocationMagic(int[][] matrix, int row, int col)
+    {
+
+    }
+  }
+  }
+*/
 }
