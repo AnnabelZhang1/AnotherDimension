@@ -60,14 +60,27 @@ public class ArrayOps{
           for (int j = 0; j < matrix[0].length; j++)
             {
               sum += matrix[i][j];
+              total[i] = sum;
             }
-          total[i] = sum;
         }
-//      System.out.println(Arrays.toString(total));
       return total;
     }
 
   public static boolean isRowMagic(int[][] matrix)
+    {
+      boolean same = false;
+      int[] n = sumRows(matrix);
+      for (int i = 0; i < matrix.length-1; i++)
+        {
+          if (n[i] == n[i+1])
+            same = true;
+          else
+            same = false;
+        }
+      return same;
+    }
+
+  public static boolean isColMagic(int[][] matrix)
     {
       boolean same = false;
       int[] n = sumCols(matrix);
@@ -77,21 +90,20 @@ public class ArrayOps{
             same = true;
           else
             same = false;
-        }
-//      System.out.println(same);
+        };
       return same;
-    }
-/*
-  public static boolean isColMagic(int[][] matrix)
-    {
-
     }
 
   public static boolean isLocationMagic(int[][] matrix, int row, int col)
     {
-
+      int rowsum = 0;
+      int colsum = 0;
+      for (int i = 0; i < matrix[0].length; i++)
+        {
+          rowsum = matrix[i]
+        }
+      System.out.println(rowsum + "/" + colsum);
+      return rowsum == colsum;
     }
-  }
-  }
-*/
+
 }
