@@ -24,30 +24,16 @@ public class ArrayOps{
   public static int[] sumRows(int[][] matrix)
     {
       int[] arraysum = new int[matrix.length];
-      for (int i = 0; i < matrix.length; i++)
-        {
-          int indivsum = 0;
-          for (int j = 0; j < matrix[0].length; j++)
-            {
-              indivsum += matrix[i][j];
-            }
-          arraysum[i] = indivsum;
-        }
+      for (int j = 0; j < matrix.length; j++)
+          arraysum[j] = sum(matrix[j]);
       return arraysum;
     }
 
   public static int[]largestInRows(int[][] matrix)
     {
       int[] maxeach = new int[matrix.length];
-      for (int i = 0; i < matrix.length; i++)
-        {
-          int max = 0;
-          for (int j = 0; j < matrix[0].length; j++)
-            {
-              max = Math.max(matrix[i][j], max);
-            }
-          maxeach[i] = max;
-        }
+      for (int j = 0; j < matrix.length; j++)
+        maxeach[j] = largest(matrix[j]);
       return maxeach;
     }
 
@@ -64,18 +50,39 @@ public class ArrayOps{
       return indivsum;
     }
 
-// PART 5
+// PART 5 ----------------------------------------------
   public static int[] sumCols(int[][] matrix)
     {
-
+      int[] total = new int[matrix.length];
+      for (int i = 0; i < matrix.length; i++)
+        {
+          int sum = 0;
+          for (int j = 0; j < matrix[0].length; j++)
+            {
+              sum += matrix[i][j];
+            }
+          total[i] = sum;
+        }
+//      System.out.println(Arrays.toString(total));
+      return total;
     }
-/*
+
   public static boolean isRowMagic(int[][] matrix)
     {
-
+      boolean same = false;
+      int[] n = sumCols(matrix);
+      for (int i = 0; i < matrix.length-1; i++)
+        {
+          if (n[i] == n[i+1])
+            same = true;
+          else
+            same = false;
+        }
+//      System.out.println(same);
+      return same;
     }
-
-  public static boolea isColMagic(int[][] matrix)
+/*
+  public static boolean isColMagic(int[][] matrix)
     {
 
     }

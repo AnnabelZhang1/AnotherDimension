@@ -12,6 +12,15 @@ public class Tester{
       ArrayOps.sum(new int[][] {{  1,  0, 12, -1 },
                                 {  7, -2,  2,  1 },
                                 { -5, -2,  2, -9 }});
+      ArrayOps.sumCols(new int[][] {{  1,  0, 12, -1 },
+                                    {  7, -2,  2,  1 },
+                                    { -5, -2,  2, -9 }});
+      ArrayOps.isRowMagic(new int[][] {{  1,  0, 12, -1 },
+                                        {  7, -2,  2,  1 },
+                                        { -5, -2,  2, -9 }});
+      ArrayOps.isRowMagic(new int[][] {{  1,  0, 12, -1 },
+                                        {  -3, 3,  4,  8 },
+                                        { -24, -50,  -14, 100 }});
 
     }
 
