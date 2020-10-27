@@ -96,13 +96,17 @@ public class ArrayOps{
 
   public static boolean isLocationMagic(int[][] matrix, int row, int col)
     {
-      int rowsum = 0;
       int colsum = 0;
+      int rowsum = 0;
       for (int i = 0; i < matrix[0].length; i++)
         {
-          rowsum = matrix[i]
+          colsum += matrix[row][i];
         }
-      System.out.println(rowsum + "/" + colsum);
+      for (int i = 0; i < matrix.length; i++)
+        {
+          rowsum += matrix[i][col];
+        }
+      System.out.println(rowsum == colsum);
       return rowsum == colsum;
     }
 
