@@ -40,13 +40,9 @@ public class ArrayOps{
   public static int sum(int[][] arr)
     {
       int indivsum = 0;
+      int[] rsum = sumRows(arr);
       for (int i = 0; i < arr.length; i++)
-        {
-          for (int j = 0; j < arr[0].length; j++)
-            {
-              indivsum += arr[i][j];
-            }
-        }
+          indivsum += rsum[i];
       return indivsum;
     }
 
